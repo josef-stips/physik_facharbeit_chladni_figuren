@@ -1,0 +1,1 @@
+export type CardTopic = "Experiment Aufbau" | "Datenbank" | "Mathematische Ansätze" | "3D Darstellung";
