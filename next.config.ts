@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  images: {
+    domains: [
+      'chladni-plate-photos.5f1cebc7d248a89480ded2959e8beabc.r2.cloudflarestorage.com',
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

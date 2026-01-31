@@ -1,5 +1,7 @@
+import Gallery from "@/components/Gallery";
 
 
 export default function Database() {
-    return (<div></div>)
+
+    return (<Gallery/>)
 }
