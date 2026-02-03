@@ -1,0 +1,18 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"files.autoSave": "onWindowChange",
+	"javascript.format.enable": false,
+	"typescript.format.enable": false,
+	"prettier.singleQuote": true,
+	"prettier.bracketSameLine": true,
+	"editor.formatOnPaste": false,
+	"prettier.printWidth": 80,
+	"prettier.bracketSpacing": true,
+	"prettier.arrowParens": "always",
+	"prettier.trailingComma": "all",
+	"prettier.semi": true,
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"svg.preview.background": "editor"
+}
