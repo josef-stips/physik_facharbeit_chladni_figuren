@@ -30,8 +30,7 @@ export default function Home() {
 				<div className="flex flex-col gap-10 sm:flex-row justify-center">
 					<Card title="Experiment Aufbau" />
 					<Card title="Datenbank" />
-					<Card title="Mathematische Ansätze" />
-					<Card title="3D Darstellung" />
+					<Card title="Facharbeit" />
 				</div>
 
 				<div className="mt-[1vh] pb-[6vh]">
