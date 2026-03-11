@@ -28,22 +28,29 @@ export default function Gallery({ query, filters, setAmount }: Props) {
 	const [photos, setPhotos] = useState<string[]>([]);
 
 	useEffect(() => {
-		fetch('/api/photos', { cache: 'force-cache' })
+		fetch('/api/photos')
 			.then((res) => res.json())
-			.then((data) => setPhotos(data));
+			.then((data) => {
+				console.log('API DATA:', data);
+				setPhotos(Array.isArray(data) ? data : []);
+			})
+			.catch((err) => {
+				console.error('API ERROR:', err);
+				setPhotos([]);
+			});
 	}, []);
 
 	const photoMetaData: PhotoMetaData[] = useMemo(() => {
-		return photos.map((ph, i) => ({
+		return photos?.map?.((ph, i) => ({
 			url: ph,
 			index: i,
-			fileName: ph.slice(87, 100),
+			fileName: ph.split('/').pop() ?? '',
 			frequency: testedFrequencies[i]?.f,
 			isNote: !!testedFrequencies[i]?.n,
 			annotation: testedFrequencies[i]?.a,
 			note: testedFrequencies[i]?.n,
 			noteTuning: testedFrequencies[i]?.t,
-			plate: testedFrequencies[i].p,
+			plate: testedFrequencies[i]?.p,
 		}));
 	}, [photos]);
 
